@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ItemLayout from "./ItemLayout";
 
 const AboutDetails = () => {
@@ -13,7 +12,7 @@ const AboutDetails = () => {
           <h2 className="text-xl md:text-2xl text-left w-full capitalize">
             Architect of Enchantment
           </h2>
-          <p className="font-light text-xs sm:text-sm md:text-base   ">
+          <p className="font-light text-xs sm:text-sm md:text-base">
             My journey in design is powered by an array of mystical tools and
             languages, with JavaScript casting the core of my enchantments. I
             wield frameworks like React.js and Next.js with precision, crafting
