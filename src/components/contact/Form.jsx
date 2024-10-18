@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 import { motion } from "framer-motion";
 
-const container = {
+const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -16,7 +16,7 @@ const container = {
   },
 };
 
-const item = {
+const itemVariants = {
   hidden: { scale: 0 },
   show: { scale: 1 },
 };
@@ -82,14 +82,14 @@ export default function Form() {
     <>
       <Toaster richColors={true} />
       <motion.form
-        variants={container}
+        variants={containerVariants}
         initial="hidden"
         animate="show"
         onSubmit={handleSubmit(onSubmit)}
         className="max-w-md w-full flex flex-col items-center justify-center space-y-4"
       >
         <motion.input
-          variants={item}
+          variants={itemVariants}
           type="text"
           placeholder="name"
           {...register("name", {
@@ -107,7 +107,7 @@ export default function Form() {
           </span>
         )}
         <motion.input
-          variants={item}
+          variants={itemVariants}
           type="email"
           placeholder="email"
           {...register("email", { required: "This field is required!" })}
@@ -119,7 +119,7 @@ export default function Form() {
           </span>
         )}
         <motion.textarea
-          variants={item}
+          variants={itemVariants}
           placeholder="message"
           {...register("message", {
             required: "This field is required!",
@@ -141,11 +141,10 @@ export default function Form() {
         )}
 
         <motion.input
-          variants={item}
+          variants={itemVariants}
           value="Cast your message!"
           className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid
-      hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize
-      "
+            hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize"
           type="submit"
         />
       </motion.form>

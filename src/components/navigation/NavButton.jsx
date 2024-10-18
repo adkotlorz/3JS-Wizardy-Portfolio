@@ -38,7 +38,7 @@ const getIcon = (icon) => {
   }
 };
 
-const item = {
+const itemVariants = {
   hidden: { scale: 0 },
   show: { scale: 1 },
 };
@@ -63,7 +63,7 @@ const NavButton = ({
             style={{ transform: `translate(${x}, ${y})` }}
           >
             <NavLink
-              variants={item}
+              variants={itemVariants}
               href={link}
               target={newTab ? "_blank" : "_self"}
               className="text-foreground rounded-full flex items-center justify-center custom-bg"
@@ -84,7 +84,7 @@ const NavButton = ({
         ) : (
           <div className="w-fit cursor-pointer z-50">
             <NavLink
-              variants={item}
+              variants={itemVariants}
               href={link}
               target={newTab ? "_blank" : "_self"}
               className="text-foreground  rounded-full flex items-center justify-center custom-bg"

@@ -1,4 +1,5 @@
 "use client";
+
 import { BtnList } from "@/app/data";
 import React from "react";
 import NavButton from "./NavButton";
@@ -6,7 +7,7 @@ import useScreenSize from "../hooks/useScreenSize";
 import ResponsiveComponent from "../ResponsiveComponent";
 import { motion } from "framer-motion";
 
-const container = {
+const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -28,7 +29,7 @@ const Navigation = () => {
         {({ size }) => {
           return size && size >= 480 ? (
             <motion.div
-              variants={container}
+              variants={containerVariants}
               initial="hidden"
               animate="show"
               className="w-max flex items-center justify-center relative hover:pause animate-spin-slow group"
@@ -49,7 +50,7 @@ const Navigation = () => {
           ) : (
             <>
               <motion.div
-                variants={container}
+                variants={containerVariants}
                 initial="hidden"
                 animate="show"
                 className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 item-start xs:items-center justify-center relative  group xs:hidden"
@@ -60,7 +61,7 @@ const Navigation = () => {
               </motion.div>
 
               <motion.div
-                variants={container}
+                variants={containerVariants}
                 initial="hidden"
                 animate="show"
                 className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-end xs:items-center justify-center relative group xs:hidden"
