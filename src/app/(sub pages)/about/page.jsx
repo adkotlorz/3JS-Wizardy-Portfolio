@@ -5,7 +5,7 @@ import RenderModel from "@/components/RenderModel";
 import Hat from "@/components/models/Hat";
 import AboutDetails from "@/components/about";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Image
