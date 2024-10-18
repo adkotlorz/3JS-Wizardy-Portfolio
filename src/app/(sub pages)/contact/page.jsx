@@ -1,9 +1,7 @@
 import Image from "next/image";
 
 import bg from "../../../../public/background/contact-background.png";
-import RenderModel from "@/components/RenderModel";
-import Hat from "@/components/models/Hat";
-import AboutDetails from "@/components/about";
+import Form from "@/components/contact/Form";
 
 export default function Contact() {
   return (
@@ -29,6 +27,7 @@ export default function Contact() {
             magic in response.
           </p>
         </div>
+        <Form />
       </section>
     </>
   );
