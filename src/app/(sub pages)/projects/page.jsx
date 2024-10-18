@@ -12,11 +12,10 @@ export default function Home() {
       <Image
         src={bg}
         alt="background"
-        fill
-        className="-z-50 fixed w-full h-full object-cover object-center opacity-25"
+        className="-z-50 fixed w-full h-full top-0 left-0 object-cover object-center opacity-25"
       />
       <ProjectsList projects={projectsData} />
-      <div className="flex items-center justify-center fixed top-20 left-0 h-screen">
+      <div className="flex items-center justify-center fixed top-20 -left-24 h-screen">
         <RenderModel>
           <Staff />
         </RenderModel>
