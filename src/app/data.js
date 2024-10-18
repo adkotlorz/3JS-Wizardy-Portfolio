@@ -77,9 +77,9 @@ export const BtnList = [
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
-    label: "Github",
+    label: "Figma",
     link: "#",
-    icon: "github",
+    icon: "figma",
     newTab: true,
   },
   {
