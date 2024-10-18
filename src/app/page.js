@@ -15,7 +15,6 @@ export default function Home() {
         className="w-full h-full object-cover object-center opacity-25"
       />
       <div className="w-full h-screen">
-        {/* navigation and 3d model */}
         <Navigation />
         <RenderModel>
           <Wizard />
